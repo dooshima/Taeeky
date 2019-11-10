@@ -1,0 +1,158 @@
+body{
+	  background-color: #90afc5;     
+}
+
+
+.mySlides {display:none;}
+
+
+#blog{
+	background-color: white;
+	height: 400px;
+}
+
+.item-1, 
+.item-2,
+.item-3,
+.item-4 {
+	position: absolute;
+  display: inline-block;
+	top: 2em;
+  margin-top:0px;
+  width: 80%;
+  
+  font-size: 2em;
+
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+.item-4{
+	animation-name: anim-4;
+}
+
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -80%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 100%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -80%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 100%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -80%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+@keyframes anim-4 {
+	0%, 66.66% { left: -80%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+.shift{
+	margin-top: 20px;
+}
+
+.navbar{
+	margin-bottom: 0px;
+	background-color: #2a3132;
+	border: 0;
+	
+}
+nav{
+	font-family: sans-serif;
+	font-size: 15px;
+	
+
+}
+label{
+	display: block;
+	margin: 5px,0;
+}
+.field{
+	width: 550px;
+
+}
+
+.lead{
+	margin-top: 150px;
+}
+.space{
+	height: 50px;
+	background-color: black;
+}
+
+
+#con{
+	 background-image: url(../image/wall.jpg);
+    background-repeat: no-repeat, repeat;
+	background-color: white;
+	height: 250px;
+}
+
+.leads{
+	margin-top: 250px;
+}
+
+.info{
+	background-color: white;
+	height: 80px;
+}
+
+table, th, td {
+	margin-top: 30px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+
+} 
+
+
+#beltes{
+
+	background-color: white;
+
+}         
+
+.tab{
+	width:100%
+}
+
+.tab tr{
+	border-color: grey;
+}
+#train{
+	margin-top: 100px;
+	border: 0px;
+}
+
+.toora{
+	background-color: #90afc5;
+}

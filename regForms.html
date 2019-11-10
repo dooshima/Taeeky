@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>Forms</title>
+
+</head>
+<body>
+	<h2>Fill it</h2>
+
+<div ng-app="" ng-controller="studentController">
+	<form name="studentForm" novalidate>
+		<table>
+			<tr>
+				<td>Enter first name:</td>
+					<td>
+						<input name="firstname" type="text" ng-model="firstName" required> <span style="color:red" ng-show="studentForm.firstname.$dirty && studentForm.firstname.$invalid">  <span ng-show="studentForm.firstname.$error.required">First Name is required.</span> </span>
+			
+				</td>
+			</tr>
+
+			<tr>
+				<td>Enter last name: </td>
+				<td>
+					<input name="lastname" type="text" ngmodel="lastName" required><span style="color:red" ng-show="studentForm.lastname.$dirty && studentForm.lastname.$invalid"> <span ng-show="studentForm.lastname.$error.required">Last Name is required.</span></span>
+				</td>
+			</tr>
+
+
+		<tr>
+			<td>Email: </td>
+			<td>
+				<input name="email" type="email" ng-model="email" length="100" required> 
+				<!-- this is when the email is correct -->
+					<span style="color:red" ng-show="studentForm.email.$dirty && studentForm.email.$invalid"> 
+					<!-- specifying to the user to enter an email -->
+					<span ng-show="studentForm.email.$error.required">Email is required.</span> 
+
+					<!-- shows error telling the user that the email is wrong -->
+					<span ng-show="studentForm.email.$error.email">Invalid email address.</span> </span>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<!--  -->
+				<button ng-click="reset()">Reset</button>
+			</td>
+
+			<td>
+				<button ng-disabled="studentForm.firstname.$dirty && studentForm.firstname.$invalid || studentForm.lastname.$dirty && studentForm.lastname.$invalid|| studentForm.email.$dirty && studentForm.email.$invalid" ng-click="submit()">Submit
+				</button>
+			</td>
+
+		
+		</tr>
+
+</table>
+<a href="beltable.html">Back Click Me</a>
+</form>
+</div>
+<script>
+	function studentController($scope) {
+	$scope.reset = function(){
+		$scope.firstName = "Dooshima";
+		$scope.lastName = "Anger";
+		$scope.email = "danielladoosh@gmail.com";
+	}
+		$scope.reset();                                           
+	}
+</script>
+<script
+src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">
+</script>
+</body>
+</html>
